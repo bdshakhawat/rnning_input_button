@@ -1,1 +1,6 @@
 Free Javascript Button Resource Link : https://freefrontend.com/html-buttons-with-javascript/
+Algorithom of creating a running buttons
+Step1: Hold the button by document.getelementbyId
+Step2: Write a main function to get the current position of the button
+Step3:Set the element in a new position
+Step4: Check the boundary to keep the element inside the window
