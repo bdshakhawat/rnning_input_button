@@ -4,3 +4,19 @@ Step1: Hold the button by document.getelementbyId
 Step2: Write a main function to get the current position of the button
 Step3:Set the element in a new position
 Step4: Check the boundary to keep the element inside the window
+substep: 1
+#calculate the position of the button after every move 
+Say the total window is 1000px. Now, the width of the button is 200px and every after mouse move it will
+go 50px. So, firstly i have to substarct the total width of the button plus 50ps move from its current
+position.The initial position of the button will be at left top corner where initialy the value of 
+x-axis will be 0 and y-axis will be zero.That means co-ordinate(0,0). Now, when the current position
+of the button(element) will be 800px in that case in next move the element(button) will cross the 
+window boundary of 1000px and disapear. So, to keep the element(button) insie the window boundary in
+need to write four function to restrict the button from going out of the window. For this i can use 
+a negative amount of pixel like(-50px) to turn back it to the window when it want to cross the window 
+along x-axis with the help of a helper function. Like this write another helper function to back the 
+element when its position is exactly (0,0) means left(0),Top(0) by applying negative margin of -50px.
+Now write another two function to stop its move outside of window along y-axis by using negative margin
+top.
+****We can do this same thing by randomly positioning the button within a limit boundary like (0 to 800px)
+

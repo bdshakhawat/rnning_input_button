@@ -13,9 +13,14 @@ const evilButton=document.getElementById('evil-button');
                 console.log(buttonBox)
 
                 // Step 2: set the element into a new position
-                evilButton.style.position = "absolute";
-                evilButton.style.left = buttonBox.x + 50 +'px';
-                evilButton.style.top = buttonBox.y + 50 +'px';
+                // evilButton.style.position = "absolute";
+                // evilButton.style.left = buttonBox.x + 50 +'px';
+                // evilButton.style.top = buttonBox.y + 50 +'px';
+                function setNewPosition(x,y){
+                    evilButton.style.position = "absolute";
+                    evilButton.style.left = buttonBox.x + 50 +'px';
+                    evilButton.style.top = buttonBox.y + 50 +'px';
+                }
 
                 // Step 3: check the boundary and keep the element inside the window.
 
