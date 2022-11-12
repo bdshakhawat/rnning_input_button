@@ -8,5 +8,5 @@ body{
 #evil-button{
     position: absolute;
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: 16px;
 }

@@ -1,10 +1,11 @@
 Free Javascript Button Resource Link : https://freefrontend.com/html-buttons-with-javascript/
+#####
 Algorithom of creating a running buttons
 Step1: Hold the button by document.getelementbyId
 Step2: Write a main function to get the current position of the button
 Step3:Set the element in a new position
 Step4: Check the boundary to keep the element inside the window
-substep: 1
+********substep: 1
 #calculate the position of the button after every move 
 Say the total window is 1000px. Now, the width of the button is 200px and every after mouse move it will
 go 50px. So, firstly i have to substarct the total width of the button plus 50ps move from its current
@@ -18,5 +19,18 @@ along x-axis with the help of a helper function. Like this write another helper 
 element when its position is exactly (0,0) means left(0),Top(0) by applying negative margin of -50px.
 Now write another two function to stop its move outside of window along y-axis by using negative margin
 top.
-****We can do this same thing by randomly positioning the button within a limit boundary like (0 to 800px)
+We can do this same thing by randomly positioning the button within a limit boundary like 
+(0 to 800px)
+
+*********
+
+********
+If the  element is in the viewport, its top and left are always greater than or equal zero. In addition, its distance from the right is less than or equal to the width of the viewport, and ids distance from the bottom is less than or equal to the height of the viewport.
+
+********
+now to keep the element inside the viewport we need to write a function which will back the element 
+back to the viewport when it reached to the end of  the viewport by subtracting the value to back to the 
+initial position. 
+
+######
 
