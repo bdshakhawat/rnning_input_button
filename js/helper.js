@@ -2,15 +2,42 @@
 
 
 function isElementInViewPort(element){
+  // console.log(element)
+ 
+  // Get the new current position after every moseover event
   let rect = element.getBoundingClientRect();
-  console.log("The bounding Rect of element is ", rect)
+  // console.log(rect)
+  
+  
   // get the height of the window 
   let viewPortBottom = window.innerHeight || document.documentElement.Height;
+    console.log(document.documentElement.Height)
+
+    
+    // Get the Width and Height of the Window:
+    // const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    // const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+
   // get the width of the window 
   let viewPortRight = window.innerWidth || document.documentElement.Width;
 
   let isTopInViewPort = rect.top <= window.innerHeight-rect.height*2,
-      isLeftInViewPort = rect.left <= window.innerWidth-rect.width*2;
+       isLeftInViewPort = rect.left <= window.innerWidth-rect.width*2;
+
+  // window.innerHeight gives the value of total inner height of the total window
+  // console.log(window.innerHeight)
+
+
+  // react.height gives the value of button heighta
+  // console.log(window.innerWidth-rect.width*2)
+
+      
+ 
+  //  rect.top gives the value in px of the element's distance from the top. 
+      //  console.log(rect.top)
+      
+      
       // isBottomInViewPort = rect.bottom <= window.height -200 +"px",
       // isRightInViewPort = rect.right <= window.width -200 +"px";
 

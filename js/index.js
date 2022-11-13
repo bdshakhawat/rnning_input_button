@@ -2,16 +2,25 @@ const evilButton=document.getElementById('evil-button');
             
 // Main event
 evilButton.addEventListener('mouseover',(e)=>{
+    
 
     let isInWindow = isElementInViewPort(evilButton)
-    console.log(`Is the element in the window ${isInWindow}`)
+    // console.log(`Is the element in the window ${isInWindow}`)
+    
+    
     // Step 1: get current position of the element.
     const buttonBox=evilButton.getBoundingClientRect()
-
+    // console.log(buttonBox)
+   function keepRunning(){
     evilButton.style.position = "absolute";
     evilButton.style.left = isInWindow ? buttonBox.x + 50 +'px' : buttonBox.x - 500 + 'px';
     evilButton.style.top = isInWindow ? buttonBox.y + 50 +'px' : buttonBox.y - 500 +'px' ;
 
+   }
+   keepRunning();
+    
+
+    
     // Step 2: set the element into a new position
     // function setNewPosition(x,y){
     //     evilButton.style.position = "absolute";
@@ -23,8 +32,10 @@ evilButton.addEventListener('mouseover',(e)=>{
 })
             
 
-function distanceFromCenter(boxPosition,mousePosition,boxSize){
-    return boxPosition - mousePosition + boxSize/2
-}
+// function distanceFromCenter(boxPosition,mousePosition,boxSize){
+    
+//     return boxPosition - mousePosition + boxSize/2
+    
+// }
 
 
