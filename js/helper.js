@@ -11,7 +11,7 @@ function isElementInViewPort(element){
   
   // get the height of the window 
   let viewPortBottom = window.innerHeight || document.documentElement.Height;
-    console.log(document.documentElement.Height)
+    // console.log(document.documentElement.Height)
 
     
     // Get the Width and Height of the Window:
@@ -25,14 +25,17 @@ function isElementInViewPort(element){
   let isTopInViewPort = rect.top <= window.innerHeight-rect.height*2,
        isLeftInViewPort = rect.left <= window.innerWidth-rect.width*2;
 
-  // window.innerHeight gives the value of total inner height of the total window
-  // console.log(window.innerHeight)
 
 
-  // react.height gives the value of button heighta
-  // console.log(window.innerWidth-rect.width*2)
+  // window.innerHeight gives the value of total inner height/width of the total window
+  // console.log(window.innerHeight)/ console.log(window.innerWeidth)  // 615 /937
 
-      
+
+  // react.height gives the value of button height
+
+  // console.log(window.innerWidth-rect.width*2) {(937-200*2)} = {937 - 400}=537
+
+  //  console.log(window.innerHeight-rect.height*2) {(615-50*2)} = {615 - 100}=515  
  
   //  rect.top gives the value in px of the element's distance from the top. 
       //  console.log(rect.top)
@@ -43,7 +46,11 @@ function isElementInViewPort(element){
 
  // check if element is completely visible inside the viewport
  return (isTopInViewPort && isLeftInViewPort );
+
+//  isTopInviewport =515
+//  isLeftInviewport =537
 }
+
 // let topEle = document.getElementById('top_ele');
 //  console.log("Is top element visible:  ", isElementInViewPort(topEle) )
 
